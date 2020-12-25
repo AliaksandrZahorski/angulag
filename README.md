@@ -1,2 +1,3 @@
 # angulag
-todo try
+
+todo try mode
