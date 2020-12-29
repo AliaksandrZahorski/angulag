@@ -1,7 +1,6 @@
 <div class="card">
-  <h2>{{ title }}</h2>
-  <p [class]="pp">{{ description }}</p>
-  <em>{{ getInfoBlock() }}</em>&nbsp;
+  <h2>{{ card.title }}</h2>
+  <aside>{{ card.text }}</aside>
   <button (click)="handleChange()">Change</button>
   <input type="text" (input)="handleInput($event)" [value]="title" />
 </div>

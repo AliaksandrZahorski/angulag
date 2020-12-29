@@ -1,6 +1,15 @@
 <div class="container">
   <h1>Real</h1>
-  <app-form></app-form>
-  <app-card></app-card>
-  <app-card></app-card>
+  <div class="toggler" (click)="setVisibility()">Toggle visibility</div>
+  <hr>
+  <section *ngIf="visibility; else placeholder">
+    <app-form></app-form>
+    <app-card
+      *ngFor="let card of cardCollection"
+      [card]="card"
+    ></app-card>
+  </section>
+  <ng-template #placeholder>
+    <p>this is a plaseholder</p>
+  </ng-template>
 </div>
